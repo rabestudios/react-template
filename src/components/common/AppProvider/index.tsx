@@ -1,10 +1,8 @@
-import React from "react";
-import { BrowserRouter } from 'react-router-dom';
+import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
 
-const AppProvider: React.FC = ({children}) => (
-    <BrowserRouter>
-        {children}
-    </BrowserRouter>
+const AppProvider: React.FC = ({ children }) => (
+  <BrowserRouter>{children}</BrowserRouter>
 )
 
-export default AppProvider;
+export default AppProvider

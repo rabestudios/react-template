@@ -1,31 +1,31 @@
-import React from 'react';
+import React from 'react'
 
 interface ErrorBoundaryState {
-    hasError: boolean
+  hasError: boolean
 }
 
 class ErrorBoundary extends React.Component<{}, ErrorBoundaryState> {
-    constructor(props: Readonly<{}>) {
-        super(props);
-        this.state = {
-            hasError: false,
-        };
+  constructor(props: Readonly<{}>) {
+    super(props)
+    this.state = {
+      hasError: false
     }
+  }
 
-    static getDerivedStateFromError() {
-        return {
-            hasError: true,
-        };
+  static getDerivedStateFromError(): ErrorBoundaryState {
+    return {
+      hasError: true
     }
+  }
 
-    render() {
-        const { hasError } = this.state;
-        const { children } = this.props;
-        if (hasError) {
-            return <div>Something went wrong</div>;
-        }
-        return children;
+  render(): React.ReactNode {
+    const { hasError } = this.state
+    const { children } = this.props
+    if (hasError) {
+      return <div>Something went wrong</div>
     }
+    return children
+  }
 }
 
-export default ErrorBoundary;
+export default ErrorBoundary
