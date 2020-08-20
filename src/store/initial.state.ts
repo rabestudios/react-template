@@ -8,6 +8,7 @@ const home: HomeState = {
 }
 
 const initialState: AppState = {
+  global: {},
   home
 }
 

@@ -1,11 +1,11 @@
-import { types, HomeAction} from './types'
+import { SET_DEADLINE, SET_TIME_LEFT, HomeAction } from './action.types'
 
 export const setDeadline = (deadline: string): HomeAction => ({
-  type: types.SET_DEADLINE,
+  type: SET_DEADLINE,
   deadline
 })
 
-export const setTimeLeft = (timeLeft: number) => ({
-  type: types.SET_TIME_LEFT,
+export const setTimeLeft = (timeLeft: string): HomeAction => ({
+  type: SET_TIME_LEFT,
   timeLeft
 })
