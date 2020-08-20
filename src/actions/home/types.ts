@@ -1,7 +1,10 @@
-const types = {
+export const types = {
   SET_DEADLINE: 'SET_DEADLINE',
-  SET_TIME_LEFT: 'SET_TIME_LEFT',
-  DECREASE_TIME: 'DECREASE_TIME'
+  SET_TIME_LEFT: 'SET_TIME_LEFT'
 }
 
-export default types
+export interface HomeAction {
+  type: string
+  deadline?: string
+  timeLeft?: string
+}

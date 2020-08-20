@@ -3,11 +3,18 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
+import ErrorBoundary from './components/common/ErrorBoundary'
+import AppProvider from './components/common/AppProvider'
+import AppThemeProvider from "./components/common/AppThemeProvider";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ErrorBoundary>
+    <AppThemeProvider>
+      <AppProvider>
+        <App />
+      </AppProvider>
+    </AppThemeProvider>
+  </ErrorBoundary>,
   document.getElementById('root')
 )
 
