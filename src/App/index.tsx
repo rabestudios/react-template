@@ -5,7 +5,6 @@ import * as globalActions from 'actions/global'
 import AppDialog from 'components/common/AppDialog'
 
 export interface AppProps {
-  title: string
   dialog?: AppDialogIfc
   actions: typeof globalActions
 }

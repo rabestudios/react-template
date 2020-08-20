@@ -8,7 +8,6 @@ import App from '../index'
 function mapStateToProps(state: AppState) {
   const { global } = state
   return {
-    title: 'something',
     dialog: global.dialog
   }
 }
